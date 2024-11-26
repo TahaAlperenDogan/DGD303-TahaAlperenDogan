@@ -1,0 +1,16 @@
+AVEBO
+-----------------------------------------------------------------
+PATCH NOTES V.0.1
+-----------------------------------------------------------------
+-Player controls added
+-Randomised Boss movement scripts created
+-Health system created (Boss)
+-Attack system created (Projectile based)
+-Looped moving background system added
+-UI prototype created
+-Sound effect added (Player shooting)
+
+Developer Note:
+In this version i gived a start basicly to the Project.
+For the next patch i want to work on the enemy attack and player health.
+Also i plan to work on adding new attacking type for the player too.
