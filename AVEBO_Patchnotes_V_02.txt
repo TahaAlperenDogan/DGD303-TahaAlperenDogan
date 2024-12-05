@@ -1,0 +1,10 @@
+AVEBO
+-----------------------------------------------------------------
+PATCH NOTES V.0.2
+-----------------------------------------------------------------
+-Dialog pop up system created
+-Created boundaries for the boss movements
+-Player can shoot with "K"
+
+Developer Note:
+Next patch i plan to add attack mechanic to boss.
