@@ -1,0 +1,10 @@
+AVEBO
+-----------------------------------------------------------------
+PATCH NOTES V.0.2
+-----------------------------------------------------------------
+-Boss now attacks
+-Intro Screen added
+-Player can die
+
+Developer Note:
+This push is for midterm.
