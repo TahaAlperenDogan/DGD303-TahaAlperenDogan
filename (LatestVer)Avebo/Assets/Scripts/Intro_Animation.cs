@@ -8,7 +8,8 @@ public class SpriteFadeSequence : MonoBehaviour
     public List<Sprite> sprites; // Sýrasýyla gösterilecek sprite'lar
     public float fadeDuration = 1f; // Fade in/out süresi
     public float displayDuration = 1f; // Her sprite’ýn ekranda kalma süresi
-
+    public AudioClip fadeInSound; // Fade-in sýrasýnda çalýnacak ses
+    private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
 
     void Awake()
@@ -16,6 +17,10 @@ public class SpriteFadeSequence : MonoBehaviour
         // SpriteRenderer bileþeni ekle veya kontrol et
         spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
         spriteRenderer.color = new Color(1, 1, 1, 0); // Baþlangýçta tamamen þeffaf
+
+        // AudioSource bileþeni ekle
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false; // Ses baþlangýçta çalmasýn
     }
 
     void Start()
@@ -30,24 +35,30 @@ public class SpriteFadeSequence : MonoBehaviour
             // Sprite'ý güncelle
             spriteRenderer.sprite = sprite;
 
-            // Fade in
-            yield return StartCoroutine(Fade(0, 1));
+            // Fade in (ses ile birlikte)
+            yield return StartCoroutine(Fade(0, 1, true));
 
             // Ekranda bir süre bekle
             yield return new WaitForSeconds(displayDuration);
 
             // Fade out
-            yield return StartCoroutine(Fade(1, 0));
+            yield return StartCoroutine(Fade(1, 0, false));
         }
 
         // Spriteler bittikten sonra sahneye geçiþ yap
-        SceneManager.LoadScene("GameplayScene");
+        SceneManager.LoadScene("TextIntro");
     }
 
-    private IEnumerator Fade(float startAlpha, float endAlpha)
+    private IEnumerator Fade(float startAlpha, float endAlpha, bool playSound)
     {
         float elapsedTime = 0f;
         Color color = spriteRenderer.color;
+
+        if (playSound && fadeInSound != null && audioSource != null)
+        {
+            audioSource.clip = fadeInSound;
+            audioSource.Play();
+        }
 
         while (elapsedTime < fadeDuration)
         {

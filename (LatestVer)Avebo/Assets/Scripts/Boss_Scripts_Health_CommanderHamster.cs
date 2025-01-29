@@ -26,7 +26,7 @@ public class BossHealth : MonoBehaviour
     {
         Debug.Log("Boss defeated!");
         Destroy(gameObject); // Boss'u yok et
-        SceneManager.LoadScene("VictoryTemp"); // VictoryTemp sahnesine geçiþ yap
+        SceneManager.LoadScene("GameEnd"); // VictoryTemp sahnesine geçiþ yap
     }
 
     // Opsiyonel: Saðlýk göstergesi için

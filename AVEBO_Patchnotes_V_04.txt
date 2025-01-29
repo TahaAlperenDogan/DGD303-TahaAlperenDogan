@@ -1,0 +1,13 @@
+AVEBO
+-----------------------------------------------------------------
+PATCH NOTES V.0.2
+-----------------------------------------------------------------
+-Boss now attacks does special fire attack
+-Text Intro Screen added
+-Pause Menu added
+-Main Menu added
+-Musics Added
+-Win/Loose Screens Updated
+
+Developer Note:
+This push is for final.

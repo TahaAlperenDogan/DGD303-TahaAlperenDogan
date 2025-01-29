@@ -1,19 +1,9 @@
 Notes for the ONUR HOCAM:
 PLEASE OPEN THE (LastestVer)Avebo
-IMPORTANT: You still have to alt+f4
 -------------------------------------------------------
--I use default sample scene for WIP stuff.
--I don't know how to start it first in the editor yet but please look at it for the progress so far.
--( WASD is for movement and K key is for shooting right now.)
+-I tried using timescale for pause but it causes so many bugs when you return to menu so i removed it. 
+PLEASE FORGIVE ME MY LORD!!!
+-( WASD is for movement and K key is for shooting.)
 ------------------------------------------------------
 HOPE YOU ENJOY!!
-
-
-
-
-OLD NOTES:
-------------------------------------------------------------------------
-To look for my work please open the sample scene in the scenes folder.
-I don't know how to make it open first but my progress is in that scene.
-
 Thanks!
